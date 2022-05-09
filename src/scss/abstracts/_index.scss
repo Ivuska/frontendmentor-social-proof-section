@@ -1,0 +1,10 @@
+//Collect all the partials at one place and spit them out to another place.
+
+@forward '../abstracts/colors';
+@forward '../abstracts/breakpoints';
+@forward '../abstracts/fonts';
+@forward '../abstracts/functions';
+@forward '../abstracts/global_styles';
+@forward '../abstracts/layout';
+
+
