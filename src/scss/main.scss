@@ -27,20 +27,59 @@ h1 {
   }
 }
 
+.topBackground {
+  position: absolute;
+  background-image: url('./../../images/bg-pattern-top-mobile.svg');
+  background-repeat: no-repeat;
+  width: 374px;
+  height: 362px;
+  top: 0;
+  left:0;
+  @media only screen and (min-width: $desktopLayout) {
+    position: absolute;
+    background-image: url('./../../images/bg-pattern-top-desktop.svg');
+    background-repeat: no-repeat;
+    width: 584px;
+    height: 362px;
+    top: 0;
+    left:0;
+  }
+}
+
+.bottomBackground {
+  position: absolute;
+  background-image: url('./../../images/bg-pattern-bottom-mobile.svg');
+  background-repeat: no-repeat;
+  width: 375px;
+  height: 503px;
+  bottom: 0;
+  right: 0;
+  @media only screen and (min-width: $desktopLayout) {
+    position: absolute;
+    background-image: url('./../../images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    width: 1085px;
+    height: 673px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 .headAndRatingsContainer {
   max-width: toRem(375);
   width: 100%;
   flex-direction: column;
 
   @media only screen and (min-width: $desktopLayout) {
-    max-width: toRem(900);
+    max-width: toRem(1440);
     flex-direction: row;
   }
   .introduction {
     flex-direction: column;
 
     @media only screen and (min-width: $desktopLayout) {
-      max-width: toRem(450);
+      max-width: toRem(550);
+      margin-right: toRem(90);
     }
     .perex {
       color: $darkGrayishMagenta;
@@ -49,6 +88,7 @@ h1 {
 
       @media only screen and (min-width: $desktopLayout) {
         text-align: left;
+        margin-right: toRem(90);
       }
     }
   }
@@ -61,7 +101,7 @@ h1 {
     font-size: $base-font-size * 0.75;
     
     @media only screen and (min-width: $desktopLayout) {
-      max-width: toRem(900);
+      max-width: toRem(1440);
       justify-content: space-around;
     }
 
@@ -70,20 +110,23 @@ h1 {
       align-items: center;
       max-width: toRem(375);
       width: 100%;
+      background-color: $lightGrayishMagenta;
+      margin: toRem(10) 0;
+      border-radius: toRem(10);
       
       @media only screen and (min-width: $desktopLayout) {
-        max-width: toRem(900);
+        max-width: toRem(1440);
+        padding: toRem(10) 0;
         flex-direction: row;
         justify-content: space-evenly;
+        &:nth-child(1) {
+          margin-right: toRem(80);
+        }
 
         &:nth-child(2) {
-          margin-left: toRem(90);
-        }
-        &:nth-child(3) {
-          margin-left: toRem(120);
+          margin-right: toRem(40);
         }
       }
-
     }
     h2 {
       color: $veryDarkMagenta;
@@ -105,57 +148,61 @@ h1 {
   }
 }
 
-.reviews {
-  flex-direction: column;
+.reviewsContainer {
+  margin-top: toRem(45);
 
-  @media only screen and (min-width: $desktopLayout) {
-    max-width: toRem(900);
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .customers {
-    margin: toRem(10) 0 toRem(10) 0;
-    border-radius: toRem(10);
+  .reviews {
     flex-direction: column;
-    background-color: $veryDarkMagenta;
 
     @media only screen and (min-width: $desktopLayout) {
-      margin: toRem(15) toRem(15) toRem(15) 0;
-      &:nth-child(2) {
-        margin-top: toRem(30);
-      }
-      &:nth-child(3) {
-        margin-top: toRem(45);
-      }
-    }
-    .customersHeader {
+      max-width: toRem(1440);
       flex-direction: row;
-      align-items: center;
-      div {
-        margin: toRem(15) 0 0 0;
+      align-items: flex-start;
+    }
+
+    .customers {
+      margin: toRem(10) 0 toRem(10) 0;
+      border-radius: toRem(10);
+      flex-direction: column;
+      background-color: $veryDarkMagenta;
+
+      @media only screen and (min-width: $desktopLayout) {
+        margin: toRem(15) toRem(15) toRem(15) 0;
+        &:nth-child(2) {
+          margin: toRem(30) 0 0 0;
+        }
+        &:nth-child(3) {
+          margin: toRem(45) 0 0 toRem(10);
+        }
       }
-      img {
-        display: block;
-        border-radius: 50%;
-        margin: toRem(30) toRem(15) 0 toRem(30);
-        width: toRem(45);
-        height: toRem(45);
+      .customersHeader {
+        flex-direction: row;
+        align-items: center;
+        div {
+          margin: toRem(15) 0 0 0;
+        }
+        img {
+          display: block;
+          border-radius: 50%;
+          margin: toRem(30) toRem(15) 0 toRem(30);
+          width: toRem(45);
+          height: toRem(45);
+        }
+        h2 {
+          color: $white;
+          font-weight: $weight-medium;
+          font-size: $base-font-size;
+          margin-bottom: 0;
+        }
       }
-      h2 {
+      .verifiedBuyer {
+        color: $softPink;
+        margin: 0;
+      }
+      .feedback {
         color: $white;
-        font-weight: $weight-medium;
-        font-size: $base-font-size;
-        margin-bottom: 0;
+        padding: 0 toRem(30) 0 toRem(30);
       }
-    }
-    .verifiedBuyer {
-      color: $softPink;
-      margin: 0;
-    }
-    .feedback {
-      color: $white;
-      padding: 0 toRem(30) 0 toRem(30);
     }
   }
 }
