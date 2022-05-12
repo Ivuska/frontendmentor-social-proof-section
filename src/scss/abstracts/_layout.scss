@@ -20,3 +20,18 @@
   width: 100%;
   }
 }
+
+.headAndRatingsContainer {
+  max-width: toRem(375);
+  width: 100%;
+  flex-direction: column;
+
+  @media only screen and (min-width: $desktopLayout) {
+    max-width: toRem(1440);
+    flex-direction: row;
+  }
+}
+
+.reviewsContainer {
+  margin-top: toRem(45);
+}

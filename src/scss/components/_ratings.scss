@@ -1,0 +1,65 @@
+@use "../abstracts/index" as *;
+
+.ratingWrapper {
+  flex-direction: column;
+  align-items: center;
+  max-width: toRem(375);
+  width: 100%;
+  background-color: $lightGrayishMagenta;
+  margin: toRem(10) 0;
+  border-radius: toRem(10);
+
+  @media only screen and (min-width: $desktopLayout) {
+    flex-direction: row;
+    max-width: toRem(1440);
+    padding: toRem(10) 0;
+    justify-content: space-evenly;
+    &:nth-child(1) {
+      margin-right: toRem(80);
+    }
+
+    &:nth-child(2) {
+      margin-right: toRem(40);
+    }
+  }
+}
+
+.ratings {
+  flex-direction: column;
+  align-items: center;
+  max-width: toRem(375);
+  width: 100%;
+  font-size: $base-font-size * 0.75;
+
+  @media only screen and (min-width: $desktopLayout) {
+    max-width: toRem(1440);
+    justify-content: space-around;
+  }
+}
+
+.ratingStars {
+  margin: 0;
+}
+
+.starIcon {
+  text-align: center;
+  display: inline-block;
+  margin: toRem(15) 0 0 0;
+  width: 17px;
+  height: 16px;
+
+  @media only screen and (min-width: $desktopLayout) {
+    margin: 0;
+  }
+}
+
+p {
+  color: $veryDarkMagenta;
+  font-weight: $weight-bold;
+  font-size: $base-font-size * 1.1;
+  margin-top: 0;
+
+  @media only screen and (min-width: $desktopLayout) {
+    margin: 0;
+  }
+}

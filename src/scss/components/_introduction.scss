@@ -1,0 +1,21 @@
+@use '../abstracts/index' as *;
+
+.introduction {
+  flex-direction: column;
+
+  @media only screen and (min-width: $desktopLayout) {
+    max-width: toRem(550);
+    margin-right: toRem(90);
+  }
+}
+
+.perex {
+  color: $darkGrayishMagenta;
+  text-align: center;
+  margin-bottom: 14px;
+
+  @media only screen and (min-width: $desktopLayout) {
+    text-align: left;
+    margin-right: toRem(90);
+  }
+}

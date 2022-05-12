@@ -1,0 +1,62 @@
+@use '../abstracts/index' as *;
+
+.reviews {
+  flex-direction: column;
+
+  @media only screen and (min-width: $desktopLayout) {
+    max-width: toRem(1440);
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.customers {
+  margin: toRem(10) 0 toRem(10) 0;
+  border-radius: toRem(10);
+  flex-direction: column;
+  background-color: $veryDarkMagenta;
+
+    @media only screen and (min-width: $desktopLayout) {
+      margin: toRem(15) toRem(15) toRem(15) 0;
+      &:nth-child(2) {
+        margin: toRem(30) 0 0 0;
+      }
+      &:nth-child(3) {
+        margin: toRem(45) 0 0 toRem(10);
+      }
+    }
+  }
+
+.customersHeader {
+  flex-direction: row;
+  align-items: center;
+}
+
+div {
+  margin: toRem(15) 0 0 0;
+}
+
+img {
+  display: block;
+  border-radius: 50%;
+  margin: toRem(30) toRem(15) 0 toRem(30);
+  width: toRem(45);
+  height: toRem(45);
+}
+
+h2 {
+  color: $white;
+  font-weight: $weight-medium;
+  font-size: $base-font-size;
+  margin-bottom: 0;
+}
+    
+.verifiedBuyer {
+  color: $softPink;
+  margin: 0;
+}
+
+.feedback {
+  color: $white;
+  padding: 0 toRem(30) 0 toRem(30);
+}
