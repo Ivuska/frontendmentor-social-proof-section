@@ -44,21 +44,21 @@ body {
   font-size: $base-font-size;
   padding: 2rem;
 
-  @media only screen and (min-width: $desktopLayout) {
+  @media only screen and (min-width: $desktop-layout) {
     background-image: url('./../../images/bg-pattern-top-desktop.svg') top left no-repeat,
     url('./../../images/bg-pattern-bottom-desktop.svg') bottom right no-repeat;
   }
 }
 
 h1 {
-  color: $veryDarkMagenta;
+  color: $very-dark-magenta;
   text-align: center;
   font-size: $base-font-size * 2.5;
   line-height: 1;
   font-weight: $weight-bold;
   margin-bottom: 0;
 
-  @media only screen and (min-width: $desktopLayout) {
+  @media only screen and (min-width: $desktop-layout) {
     text-align: left;
   }
 }

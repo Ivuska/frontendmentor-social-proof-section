@@ -1,25 +1,25 @@
 @use "../abstracts/index" as *;
 
-.ratingWrapper {
+.rating-wrapper {
   flex-direction: column;
   align-items: center;
-  max-width: toRem(375);
+  max-width: to-rem(375);
   width: 100%;
-  background-color: $lightGrayishMagenta;
-  margin: toRem(10) 0;
-  border-radius: toRem(10);
+  background-color: $light-grayish-magenta;
+  margin: to-rem(10) 0;
+  border-radius: to-rem(10);
 
-  @media only screen and (min-width: $desktopLayout) {
+  @media only screen and (min-width: $desktop-layout) {
     flex-direction: row;
-    max-width: toRem(1440);
-    padding: toRem(10) 0;
+    max-width: to-rem(1440);
+    padding: to-rem(10) 0;
     justify-content: space-evenly;
     &:nth-child(1) {
-      margin-right: toRem(80);
+      margin-right: to-rem(80);
     }
 
     &:nth-child(2) {
-      margin-right: toRem(40);
+      margin-right: to-rem(40);
     }
   }
 }
@@ -27,12 +27,12 @@
 .ratings {
   flex-direction: column;
   align-items: center;
-  max-width: toRem(375);
+  max-width: to-rem(375);
   width: 100%;
   font-size: $base-font-size * 0.75;
 
-  @media only screen and (min-width: $desktopLayout) {
-    max-width: toRem(1440);
+  @media only screen and (min-width: $desktop-layout) {
+    max-width: to-rem(1440);
     justify-content: space-around;
   }
 }
@@ -41,25 +41,25 @@
   margin: 0;
 }
 
-.starIcon {
+.star-icon {
   text-align: center;
   display: inline-block;
-  margin: toRem(15) 0 0 0;
+  margin: to-rem(15) 0 0 0;
   width: 17px;
   height: 16px;
 
-  @media only screen and (min-width: $desktopLayout) {
+  @media only screen and (min-width: $desktop-layout) {
     margin: 0;
   }
 }
 
 p {
-  color: $veryDarkMagenta;
+  color: $very-dark-magenta;
   font-weight: $weight-bold;
   font-size: $base-font-size * 1.1;
   margin-top: 0;
 
-  @media only screen and (min-width: $desktopLayout) {
+  @media only screen and (min-width: $desktop-layout) {
     margin: 0;
   }
 }

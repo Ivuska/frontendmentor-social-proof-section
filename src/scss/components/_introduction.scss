@@ -3,19 +3,19 @@
 .introduction {
   flex-direction: column;
 
-  @media only screen and (min-width: $desktopLayout) {
-    max-width: toRem(550);
-    margin-right: toRem(90);
+  @media only screen and (min-width: $desktop-layout) {
+    max-width: to-rem(550);
+    margin-right: to-rem(90);
   }
 }
 
 .perex {
-  color: $darkGrayishMagenta;
+  color: $dark-graysih-magenta;
   text-align: center;
   margin-bottom: 14px;
 
-  @media only screen and (min-width: $desktopLayout) {
+  @media only screen and (min-width: $desktop-layout) {
     text-align: left;
-    margin-right: toRem(90);
+    margin-right: to-rem(90);
   }
 }
